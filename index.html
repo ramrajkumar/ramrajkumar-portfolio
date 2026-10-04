@@ -900,14 +900,6 @@ window.addEventListener('scroll', function(){
   if(backTop) backTop.classList.toggle('show', scrolled > 500);
   if(navbar) navbar.classList.toggle('scrolled', scrolled > 40);
 
-  // Hero parallax fade
-  if(scrolled < window.innerHeight){
-    var hc = document.querySelector('.hero-content');
-    if(hc){ var p=scrolled/window.innerHeight; hc.style.transform='translateY('+(scrolled*.2)+'px)'; hc.style.opacity=1-p*1.5; }
-    // Aurora parallax
-    var blobs = document.querySelectorAll('.ab');
-    blobs.forEach(function(b,i){ b.style.transform='translateY('+(scrolled*(0.06+i*.03))+'px)'; });
-  }
 
   // Scroll velocity → particle speed boost
   var vel = Math.abs(scrolled - lastScroll);
