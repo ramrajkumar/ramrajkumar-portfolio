@@ -155,6 +155,12 @@ body.cur-hover #cursor-dot{width:3px;height:3px}
 @keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(124,58,237,0)}50%{box-shadow:0 0 0 8px rgba(124,58,237,.07)}}
 .pulse-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulseDot 2s ease infinite}
 @keyframes pulseDot{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+/* HERO PROFILE IMAGE */
+.hero-avatar{width:110px;height:110px;border-radius:50%;margin:0 auto 1.6rem;position:relative;display:block;animation:fadeUp .6s ease both}
+.hero-avatar-ring{padding:3px;background:conic-gradient(from 0deg,var(--purple),var(--cyan),var(--pink),var(--orange),var(--purple));border-radius:50%;animation:spinSlow 9s linear infinite;display:inline-block}
+.hero-avatar-img{display:block;width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid var(--bg);animation:spinSlow 9s linear infinite reverse}
+.hero-avatar-initials{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(6,182,212,.12));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;letter-spacing:-.02em;border:3px solid var(--bg);animation:spinSlow 9s linear infinite reverse}
+
 .hero-greet{font-size:1.1rem;color:var(--muted-l);margin-bottom:.3rem;animation:fadeUp .6s ease .1s both}
 
 /* Glitch name */
@@ -432,6 +438,11 @@ footer{text-align:center;padding:2.5rem 2rem;border-top:1px solid rgba(255,255,2
   <div id="hero-spot"></div>
   <canvas id="particles"></canvas>
   <div class="hero-content">
+    <div class="hero-avatar">
+      <div class="hero-avatar-ring">
+        <img src="profile.jpg" class="hero-avatar-img" alt="Ramraj Kumar" onerror="this.parentElement.innerHTML='<div class=\'hero-avatar-initials gradient-text\'>RK</div>'">
+      </div>
+    </div>
     <div class="hero-badge"><span class="pulse-dot"></span>Open to Freelance &amp; Full-time Opportunities</div>
     <p class="hero-greet">Hi, I'm</p>
     <h1 class="hero-name" id="hero-name" data-text="Ramraj Kumar">Ramraj Kumar</h1>
@@ -801,29 +812,10 @@ window.addEventListener('load', function(){
       if(loader) loader.style.display='none';
       if(ldrBar) ldrBar.style.display='none';
       if(ldrPct) ldrPct.style.display='none';
-      scrambleName();
       setTimeout(startTypewriter, 320);
     }, 1050);
   }, 350);
 });
-
-/* ── NAME SCRAMBLE ── */
-function scrambleName(){
-  var el = document.getElementById('hero-name');
-  if(!el) return;
-  var final = 'Ramraj Kumar';
-  var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@!%&*';
-  var iter = 0, max = final.length * 4;
-  var iv = setInterval(function(){
-    el.textContent = final.split('').map(function(c,i){
-      if(c===' ') return ' ';
-      if(i < iter/4) return c;
-      return chars[Math.floor(Math.random()*chars.length)];
-    }).join('');
-    iter++;
-    if(iter>=max){ clearInterval(iv); el.textContent = final; }
-  }, 28);
-}
 
 /* ── TYPEWRITER ── */
 var roles = ['SDET','Full-Stack Developer','Quality Engineer','React Developer','Cloud Engineer'];
