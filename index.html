@@ -383,6 +383,21 @@ footer{text-align:center;padding:2.5rem 2rem;border-top:1px solid rgba(255,255,2
 .avail-cta-email{color:#C9A84C;text-decoration:none;font-weight:600;font-size:.85rem;border:1px solid rgba(201,168,76,.26);padding:.45rem 1rem;border-radius:8px;transition:all .2s;white-space:nowrap;cursor:none}
 .avail-cta-email:hover{background:rgba(201,168,76,.07)}
 
+/* SCHOOL MANAGEMENT SPECIAL */
+.school-card{background:#020a09;border-color:rgba(34,197,94,.1);margin-top:2rem}
+.school-card:hover{border-color:rgba(34,197,94,.3) !important;box-shadow:0 32px 80px rgba(34,197,94,.04) !important}
+.school-ribbon{background:linear-gradient(135deg,#22c55e,#16a34a);color:#020a09;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:.46rem 1.5rem;display:block;text-align:center}
+.school-header{background:linear-gradient(135deg,rgba(34,197,94,.09),rgba(16,163,74,.04))}
+.school-demo-block{margin:1.5rem 0;padding:1.4rem;background:rgba(34,197,94,.03);border:1px solid rgba(34,197,94,.12);border-radius:14px}
+.school-demo-title{font-weight:700;font-size:.92rem;color:var(--text);margin-bottom:.3rem}
+.school-demo-note{font-size:.78rem;color:var(--muted-l);margin-bottom:1.1rem}
+.school-creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.school-cred{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.055);border-radius:10px;padding:.75rem 1rem}
+.school-cred-label{font-size:.78rem;font-weight:700;color:#4ade80;margin-bottom:.4rem}
+.school-cred-path{font-weight:400;color:var(--muted-l);font-size:.73rem;margin-left:.3rem}
+.school-cred-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.school-cred-row span{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:.2rem .6rem;font-size:.76rem;font-family:monospace;color:var(--muted-l)}
+
 /* RESPONSIVE */
 @media(max-width:900px){#about .inner{grid-template-columns:1fr;gap:2.5rem;text-align:center}.avatar-scene{width:220px;height:220px}.avatar-initials{font-size:4rem}.float-label{display:none}.section-sub{max-width:100%}.feat-list{grid-template-columns:1fr}.hero-content{flex-direction:column;text-align:center;gap:2.5rem}.hero-text-col{text-align:center}.hero-bio{margin:0 auto 2.8rem}.hero-btns{justify-content:center}.hero-photo-img{width:240px;height:310px}.hero-photo-initials{width:240px;height:310px}}
 @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}#cursor-dot,#cursor-ring,.c-trail{display:none}body{cursor:auto}a,button{cursor:pointer}.proj-header{flex-direction:column}}
@@ -694,6 +709,65 @@ footer{text-align:center;padding:2.5rem 2rem;border-top:1px solid rgba(255,255,2
         <div class="avail-cta">
           <div class="avail-cta-text"><span class="pulse-dot g"></span><strong>Get this for your restaurant</strong> — white-label version delivered in 48 hours</div>
           <a href="mailto:ramrajkumar206@gmail.com" class="avail-cta-email">ramrajkumar206@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHOOL MANAGEMENT SYSTEM -->
+    <div class="project-card school-card reveal tilt">
+      <div class="school-ribbon">🏫 Real Client — Built for a CBSE School in Bihar</div>
+      <div class="proj-header school-header">
+        <div><div class="proj-title">🏫 School Management System</div><div class="proj-tagline">5-Portal Full-Stack Platform for Real Merit Public School, Darbhanga</div></div>
+        <span class="proj-status live"><span class="pulse-dot g"></span>Live on Vercel</span>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">A complete digital management system built for Real Merit Public School, Darbhanga, Bihar — replacing paper-based school records with a modern web platform. Features 5 fully functional portals: Admin, Teacher, Student &amp; Parent, Employee, and a public school website — all in one deployment.</p>
+        <div class="value-props">
+          <span class="vprop">🏫 Real client — live CBSE school</span>
+          <span class="vprop">5️⃣ portals in one deployment</span>
+          <span class="vprop">📊 Auto CBSE grade calculation (A1–E)</span>
+          <span class="vprop">🔐 JWT + Role-based Access Control</span>
+        </div>
+        <ul class="feat-list">
+          <li>Admin: students, fees, staff, CSV export</li><li>Teacher: exam results with CBSE grade (A1–E)</li>
+          <li>Student: login via Admission No. + DOB</li><li>Employee: self-service for non-teaching staff</li>
+          <li>Public website with announcement ticker</li><li>Admission enquiry &amp; contact forms</li>
+          <li>JWT auth with role-based access control</li><li>SQLite — zero-cost, zero-config deployment</li>
+        </ul>
+        <div class="school-demo-block">
+          <div class="school-demo-title">🔗 Try All 5 Portals — Demo Data Pre-loaded</div>
+          <div class="school-demo-note">First load may take 30 seconds (free hosting)</div>
+          <div class="school-creds-grid">
+            <div class="school-cred">
+              <div class="school-cred-label">Admin Panel <span class="school-cred-path">/admin</span></div>
+              <div class="school-cred-row"><span>admin</span><span>rmps@2025</span></div>
+            </div>
+            <div class="school-cred">
+              <div class="school-cred-label">Teacher Portal <span class="school-cred-path">/staff</span></div>
+              <div class="school-cred-row"><span>teacher</span><span>rmps@teacher2025</span></div>
+            </div>
+            <div class="school-cred">
+              <div class="school-cred-label">Student Portal <span class="school-cred-path">/portal</span></div>
+              <div class="school-cred-row"><span>RMPS20250001</span><span>DOB: 2009-05-15</span></div>
+            </div>
+            <div class="school-cred">
+              <div class="school-cred-label">Employee Portal <span class="school-cred-path">/employee</span></div>
+              <div class="school-cred-row"><span>driver</span><span>rmps@demo123</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-tag">React 18</span><span class="tech-tag">Vite</span><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">SQLite</span><span class="tech-tag">JWT Auth</span><span class="tech-tag">RBAC</span><span class="tech-tag">Vercel</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://schoolmanagementsystem-eight-iota.vercel.app" target="_blank" rel="noopener" class="btn-primary magnetic ripple-wrap">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            View Live Site
+          </a>
+          <a href="https://schoolmanagementsystem-eight-iota.vercel.app/admin" target="_blank" rel="noopener" class="btn-outline magnetic ripple-wrap" style="font-size:.88rem;padding:.75rem 1.5rem">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Admin Portal
+          </a>
         </div>
       </div>
     </div>
